@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+
+body{
+    text-align: center;
+    background-color: rgb(40, 40, 187);
+    
+}
+
+header {
+    font-family: 'Lobster', cursive,'Pacifico', cursive, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2021/09/fundo-do-mar-estrutura-misterios-e-curiosidades-sobre-o-oceano-12-960x600.jpg);
+    background-size: cover;
+    color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+.navegacao:hover, a:hover{
+    color: black;
+    
+}
+
+.navegacao:active, a:active{
+    color: rgb(38, 222, 188);
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.navegacao{
+    color: rgb(10, 226, 82);
+    text-decoration: none;
+}
+
+img{
+    border-radius: 40px;
+}
+
+img:hover{
+    opacity: 0.4;
+}
+
+article section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+}
+
+#lateral{
+    position: absolute;
+    padding: 20px;
+    margin-top: 180px;
+    margin-left: 82%;
+    margin-right: 2%;
+    text-align: end;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lobster', cursive,'Pacifico', cursive, sans-serif;
+    border-radius: 30px;
+    background-color: rgb(93, 185, 99);
+}
+
+.secao{
+    font-family: 'Lobster', cursive,'Pacifico', cursive, sans-serif;
+    margin-top: 150px;
+    margin-left: 2%;
+    margin-right: 20%;
+    font-size: 30px;
+    background-color: rgb(93, 185, 99);
+    border-radius: 30px;
+    padding: 20px 30px;
+}
+
+section h3{
+    color: rgb(28, 154, 221);
+}
+
+
+#fontes, a{
+    font-family: 'Lobster', cursive,'Pacifico', cursive, sans-serif;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+}
+
+#rodape{
+    background-image: url(https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2021/09/fundo-do-mar-estrutura-misterios-e-curiosidades-sobre-o-oceano-12-960x600.jpg);
+    background-size: cover;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    bottom: 0;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
