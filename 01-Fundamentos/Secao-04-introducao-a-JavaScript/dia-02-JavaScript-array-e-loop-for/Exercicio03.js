@@ -28,7 +28,8 @@ if (media > 20) {
 }
 
 // Utilizando for, descubra qual o maior valor contido no array e imprima-o;
-let maiorValor = 0;
+let maiorValor = numbers[0];
+
 for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > maiorValor) {
         maiorValor = numbers[index];
@@ -38,20 +39,39 @@ console.log(`O maior valor é o ${maiorValor}!`);
 
 // Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
 let impares = 0;
-let quantidade = [];
 
 for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 2 !== 0) {
-        impares = numbers[index];
-        console.log(impares);
-    }
+        impares = impares + 1; // ou impares += 1;
+    } //console.log(`A quantidade de valores impares são ${impares}!`); (6)
+}
+if (impares === 0) { //caso seja 0, é por que nenhum valor impar foi encontrado.
+    console.log('nenhum valor ímpar encontrado');
+} else {
+    console.log(`O total de números impares são: ${impares}`);
 }
 
-
-
-
 // Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+let menorValor = numbers[0];
+
+for (let index = 1; index < numbers.length; index += 1) {
+        if(numbers[index] < menorValor) {
+              menorValor = numbers[index]
+        }
+}
+console.log(menorValor);
 
 // Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
+let array = [];
+
+for (let index = 1; index <= 25; index += 1) {
+    array.push(index);
+}
+console.log(array);
 
 // Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
+
+for (let index = 0; index < array.length; index += 1) {
+    let divisao = array[index] / 2;
+    console.log(divisao);
+}

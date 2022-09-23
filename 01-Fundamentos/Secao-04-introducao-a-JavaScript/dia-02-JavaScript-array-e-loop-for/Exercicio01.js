@@ -6,7 +6,7 @@ console.log(menuServices);
 //----------------------------------------------------//
 
 let menu2 = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOfPortfolio = menu2[2];
+let indexOfPortfolio = menu2[2]; // ou menu2.indexOf('Portfólio')
 
 console.log(indexOfPortfolio);
 
