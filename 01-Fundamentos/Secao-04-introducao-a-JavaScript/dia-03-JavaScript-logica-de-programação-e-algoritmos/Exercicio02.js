@@ -3,7 +3,7 @@
 //4! = 4 x 3 x 2 x 1 = 24
 let num = 10;
 
-for (let index = num - 1; index >= 1; index--) {
+for (let index = num - 1; index >= 1; index-= 1) {
     num = num * index;
 }
 console.log(num);

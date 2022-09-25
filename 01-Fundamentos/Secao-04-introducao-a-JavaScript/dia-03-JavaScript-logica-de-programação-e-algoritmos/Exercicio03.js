@@ -17,3 +17,11 @@ console.log('Passo 3 ->', joinArray);
     
 // Passo 4. Retorne a string invertida
 console.log('Passo 4 ->', joinArray); // "ebyrt"
+
+//ou let palavraInversa = ' ';
+// palavraInvertida = word.split('').reverse().join('');
+
+//ou let reverseWord = '';
+//for (let index = 0; index < word.length; index += 1) {
+//reverseWord = reverseWord + word[word.length - 1 - index];
+//}
