@@ -56,4 +56,13 @@ document.querySelector('#primeiroFilhoDoFilho');
 //Exercicios parte 03
 
 //Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+const todosFilhos = pai.childNodes;
+for (let index = todosFilhos.length - 1; index >= 0; index -= 1) {
+    const filhoAtual = todosFilhos[index];
+    if (filhoAtual.id !== 'elementoOndeVoceEsta') { // Verifica se o id do filho atual é diferente de 'elementoOndeVoceEsta'
+        filhoAtual.remove(); // Remove o filhoAtual
+      }
+}
+const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho'); // Recupera o elemento com o id segundoEUltimoFilhoDoFilho
+segundoEUltimoFilhoDoFilho.remove(); // Remove o segundo filho do filho
 
