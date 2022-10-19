@@ -5,13 +5,28 @@
 
 //O nome da função deverá ser substituaX;
 //A função deverá receber um nome por parâmetro;
-//Declare dentro da função uma variável do tipo const, com o nome frase, atribuindo o valor 'Tryber x aqui!';
+
+const substituaX = (nome) => {
+  //Declare dentro da função uma variável do tipo const, com o nome frase, atribuindo o valor 'Tryber x aqui!';
+  const frase = 'Tryber x aqui!'
+  const arrayFrase = frase.split(' ');
+
+  for (let i = 0; i < arrayFrase.length; i += 1) {
+    if (arrayFrase[i] === 'x') {
+      arrayFrase[i] = nome;
+    }
+  }
+  return arrayFrase.join(' ');
+}
+console.log(substituaX('Aline'));
 //A função deverá retornar uma nova frase onde o x da frase 'Tryber x aqui!' seja substituído pelo nome passado por parâmetro.
 //Exemplo:
 
 //Parâmetro: ‘Bebeto’
 //Retorno: ‘Tryber Bebeto aqui!’
 //Spoiler: O método split() pode ser utilizado de diferentes maneiras, como separar as palavras de um texto.
+
+
 
 //Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
 
