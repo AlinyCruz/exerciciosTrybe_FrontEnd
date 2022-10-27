@@ -13,3 +13,5 @@ function flatten() {
 }
 
 console.log(flatten());
+
+// Ajuda do gabarito
