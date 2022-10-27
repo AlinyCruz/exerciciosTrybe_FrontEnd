@@ -3,7 +3,7 @@
 // A sua função deve receber como parâmetro o nome completo da pessoa funcionária e, a partir dele, gerar automaticamente um email no formato nome_da_pessoa@trybe.com.
 
 const nomeCompleto = (nome) => {
-  let criaEmail = nome.replace(' ', '');
+  let criaEmail = nome.replace(' ', ''); // ou split(' ').join('_');
   let email = `${criaEmail.toLowerCase()}@trybe.com`;
 
   return { nome, email }

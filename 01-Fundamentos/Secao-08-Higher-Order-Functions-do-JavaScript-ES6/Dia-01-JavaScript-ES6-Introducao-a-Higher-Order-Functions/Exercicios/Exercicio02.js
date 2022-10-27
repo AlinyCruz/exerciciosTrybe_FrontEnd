@@ -3,19 +3,11 @@
 //Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado.
 //O retorno da sua HOF deve ser uma string (Ex: “Tente novamente” ou “Parabéns você ganhou”).
 
-const jogador = 2;
+const sorteio = (numeroJogador, numeroSorteio) =>  numeroJogador === numeroSorteio;
 
-const sorteio = () => {
+const conferindoJogo = (numeroJogador, funcao) => {
   let numero = Math.floor((Math.random() * 5) + 1);
-  console.log(`Numero sorteado ${numero}`);
+  return funcao(numeroJogador, numero) ? `Parabéns você ganhou, o número sorteado foi o ${numero}.` : `Tente novamente, o número sorteado foi o ${numero}.`;
 };
 
-const conferindoJogo = (funcao) => {
-  if (jogador !== funcao) {
-    console.log("Tente novamente");
-  } else {
-    console.log("Parabéns você ganhou");
-  }
-};
-conferindoJogo(sorteio);
-sorteio();
+console.log(conferindoJogo(2, sorteio));
