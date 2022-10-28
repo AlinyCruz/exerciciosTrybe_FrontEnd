@@ -63,13 +63,13 @@ const books = [
 
 //Crie uma string com os nomes de todas as pessoas autoras.
 
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+// const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames() {
-  return books.reduce( (acc, curr) => {
-    return `${acc} ${curr.author.name}` 
-  },' ')
-}
+// function reduceNames() {
+//   return books.reduce( (acc, curr) => {
+//     return `${acc} ${curr.author.name}` 
+//   },' ')
+// }
 // console.log(reduceNames());
 
 // Ajuda do gabarito
@@ -77,11 +77,38 @@ function reduceNames() {
 
 // const expectedResult = 43;
 
-function averageAge() {
+// function averageAge() {
+//   return books.reduce( (acc, curr) => {
+//     const tamanho = books.length;
+//     const idades = curr.releaseYear - curr.author.birthYear
+//     return  Math.round(acc + idades / tamanho)
+//   }, 0)
+// }
+// console.log(averageAge());
+
+// Encontre o livro com o maior nome.
+
+// const expectedResult = {
+//   id: 1,
+//   name: 'As Crônicas de Gelo e Fogo',
+//   genre: 'Fantasia',
+//   author: {
+//     name: 'George R. R. Martin',
+//     birthYear: 1948,
+//   },
+//   releaseYear: 1991,
+// };
+
+function longestNamedBook() {
   return books.reduce( (acc, curr) => {
-    const tamanho = books.length;
-    const idades = curr.releaseYear - curr.author.birthYear
-    return  Math.round(acc + idades / tamanho)
-  }, 0)
+    const nome = curr.name;
+    if (nome.length > acc.name.length) {
+      return nome
+    }
+    return acc
+  })
 }
-console.log(averageAge());
+console.log(longestNamedBook());
+
+// Ajuda do gabarito.
+
