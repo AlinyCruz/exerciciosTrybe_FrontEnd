@@ -35,3 +35,7 @@ function oldBooksOrdered() {
   })
 }
 console.log(oldBooksOrdered());
+
+// const dataHoje = new Date(); // data atual // 2022-11-02T21:19:47.539Z
+// const dataHoje = new Date().getFullYear(); // ano atual 2022
+console.log(dataHoje);
