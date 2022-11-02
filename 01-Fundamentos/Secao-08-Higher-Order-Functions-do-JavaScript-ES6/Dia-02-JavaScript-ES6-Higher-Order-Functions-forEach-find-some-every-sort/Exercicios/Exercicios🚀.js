@@ -84,3 +84,64 @@ function smallerName() {
   return nameBook;
 }
 console.log(smallerName());
+
+// 03 - Encontre o primeiro livro cujo nome possui 26 caracteres.
+
+// const expectedResult = {
+//   id: 1,
+//   name: 'As Crônicas de Gelo e Fogo',
+//   genre: 'Fantasia',
+//   author: {
+//         name: 'George R. R. Martin',
+//     birthYear: 1948,
+//   },
+//     releaseYear: 1991,
+// };
+
+function getNamedBook() {
+  return books.find((book) => {
+    return book.name.length === 26;
+  }) 
+}
+console.log(getNamedBook());
+
+// 04 - Ordene os livros por data de lançamento em ordem decrescente.
+
+function booksOrderedByReleaseYearDesc() {
+  return books.sort((a,b) => {
+    return b.releaseYear - a.releaseYear;
+  });
+}
+console.log(booksOrderedByReleaseYearDesc());
+
+// 05 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+
+// const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => {
+    return book.author.birthYear >= 1901 && book.author.birthYear <= 2000;
+  })
+}
+console.log(everyoneWasBornOnSecXX());
+
+// 06 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+// const expectedResult = true;
+
+function someBookWasReleaseOnThe80s() {
+    return books.some((book) => {
+      return book.releaseYear >= 1980 && book.releaseYear <= 1989;
+    })
+  }
+  console.log(someBookWasReleaseOnThe80s());
+
+  // 07 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+
+  // const expectedResult = false;
+
+function authorUnique() {
+    return books.every((book) => !books.some((bookSome) => (bookSome.author.birthYear === book.author.birthYear)
+        && (bookSome.author.name !== book.author.name)));
+}
+console.log(authorUnique()); // extraido do gabarito
