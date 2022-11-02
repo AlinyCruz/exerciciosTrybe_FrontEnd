@@ -79,4 +79,6 @@ const strings = () => {
     return  `${string.name} - ${string.genre} - ${string.author.name}`;
   })
 } 
-console.log(strings(books));
+// console.log(strings(books));
+
+module.exports= { books };
