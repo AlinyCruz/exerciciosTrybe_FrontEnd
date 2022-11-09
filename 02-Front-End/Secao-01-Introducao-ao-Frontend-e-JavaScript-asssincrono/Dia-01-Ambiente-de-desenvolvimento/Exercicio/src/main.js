@@ -1,11 +1,19 @@
 // Vamos importar nossa biblioteca
 import validator from 'validator';
 
+import { defineConfig } from 'vite'; // Importamos a função para configurar o Vite
+
+export default defineConfig({
+  root: 'src', // Dizemos ao Vite que a pasta raiz do nosso projeto é a '/src'
+});
+
 // Aqui, vamos selecionar, pelos ids, os campos em nossa página
 const campoDeTexto = document.querySelector('#value');
 const botao = document.querySelector('#button');
 const seletor = document.querySelector('#option');
 const textoDeSaida = document.querySelector('#answer');
+
+const UUID_VERSION = 4
 
 botao.addEventListener('click', (event) => {
   // Vamos usar o preventDefault() para evitar que, ao
@@ -19,7 +27,8 @@ botao.addEventListener('click', (event) => {
     cpf: validator.isTaxID(campoDeTexto.value, 'pt-BR'),
     hexColor: validator.isHexColor(campoDeTexto.value),
     email: validator.isEmail(campoDeTexto.value),
-    uuid: validator.isUUID(campoDeTexto.value, 4),
+    uuid: validator.isUUID(campoDeTexto.value, UUID_VERSION),
+    // uuid: validator.isUUID(campoDeTexto.value, 4),
     url: validator.isURL(campoDeTexto.value),
   };
 
