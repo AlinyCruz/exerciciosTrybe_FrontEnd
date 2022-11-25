@@ -4,10 +4,9 @@ import staringCat from './staringCat.jpg';
 
 function App() {
   return (
-    <main>
+    <main style={ {fontFamily: ''} }>
      <Image source={ staringCat } alternativeText="Cute cat staring" />
     </main>
   );
 }
-
 export default App;
