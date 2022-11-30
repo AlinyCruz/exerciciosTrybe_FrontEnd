@@ -23,10 +23,15 @@ class App extends Component {
       numeroDeCliques: 0
     }
   }
+
   eventoClick4() {
+    const { numeroDeCliques } = this.state;
+
     this.setState((estadoAnterior, _props) => ({
       numeroDeCliques: estadoAnterior.numeroDeCliques + 1
-    }))
+    }), () => {
+      console.log(this.colorButton(numeroDeCliques));
+    });
   }
 
   // Ou assim, sem o 'bind' e com Arrow function:
@@ -34,17 +39,22 @@ class App extends Component {
   // eventoClick4 = () => {
   //   console.log(this);
   // }
+  colorButton(param) {
+    return param % 2 === 0 ? 'green' : 'red';
+    }
+}
 
-  render() {
-    return (
-      <>
-      <button onClick={this.eventoClick1}>Botão 01</button>
-      <button onClick={this.eventoClick2}>Botão 02</button>
-      <button onClick={this.eventoClick3}>Botão 03</button>
-      <button onClick={this.eventoClick4}>{this.state.numeroDeCliques}</button>
-      </>
-    )
-  }
+render() {
+  return (
+    <>
+    <button type='button' onClick={this.eventoClick1}>Botão 01</button>
+    <button type='button' onClick={this.eventoClick2}>Botão 02</button>
+    <button type='button' onClick={this.eventoClick3}>Botão 03</button>
+    <button type='button' onClick={this.eventoClick4} style={ {backgroundColor: this.colorButton(eventoClick4)} }>
+      {this.state.numeroDeCliques}
+    </button>
+    </>
+  )
 }
 
 export default App;
