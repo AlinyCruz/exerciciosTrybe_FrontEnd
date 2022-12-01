@@ -1,5 +1,4 @@
-// import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class App extends Component {
 
@@ -42,19 +41,16 @@ class App extends Component {
   colorButton(param) {
     return param % 2 === 0 ? 'green' : 'red';
     }
-}
 
-render() {
-  return (
-    <>
-    <button type='button' onClick={this.eventoClick1}>Botão 01</button>
-    <button type='button' onClick={this.eventoClick2}>Botão 02</button>
-    <button type='button' onClick={this.eventoClick3}>Botão 03</button>
-    <button type='button' onClick={this.eventoClick4} style={ {backgroundColor: this.colorButton(eventoClick4)} }>
-      {this.state.numeroDeCliques}
-    </button>
-    </>
-  )
+    render() {
+      return (
+        <>
+      <button type='button' onClick={this.eventoClick1}>Botão 01</button>
+      <button type='button' onClick={this.eventoClick2}>Botão 02</button>
+      <button type='button' onClick={this.eventoClick3}>Botão 03</button>
+      <button type='button' onClick={this.eventoClick4}>{this.state.numeroDeCliques}</button>
+      </>
+    )
+  }
 }
-
 export default App;
