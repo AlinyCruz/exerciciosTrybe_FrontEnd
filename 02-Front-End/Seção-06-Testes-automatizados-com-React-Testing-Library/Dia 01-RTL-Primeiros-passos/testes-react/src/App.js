@@ -21,6 +21,7 @@ class App extends Component {
 
   render() {
     const { email, saveEmail } = this.state;
+    // const { verifyEmail } = this.props;
     return (
       <div className="App">
         <label htmlFor="id-email">

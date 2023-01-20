@@ -11,7 +11,14 @@ const ValidEmail = (props) => {
   return (
     <div>
       <h2 data-testid="id-email-user">{`Valor: ${email}`}</h2>
-      <h3>{(verifyEmail(email) ? 'Email Válido' : 'Email Inválido')}</h3>
+        {/* Adicionamos uma renderização condicional com o operador lógico '&&' para que */}
+        {/* esse elemento <h3> só exista quando a variável email tiver algum valor verdadeiro. */}
+      {
+        email && (
+          <h3 data-testid="id-is-email-valid" className={verifyEmail(email) ? 'green-text' : 'red-text'}>
+            {(verifyEmail(email) ? 'Email Válido' : 'Email Inválido')}</h3>
+        )
+      }
     </div>
   );
 };
