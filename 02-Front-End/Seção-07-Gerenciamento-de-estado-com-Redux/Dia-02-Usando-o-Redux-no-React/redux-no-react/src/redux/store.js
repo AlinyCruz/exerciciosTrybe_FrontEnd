@@ -2,7 +2,7 @@
 import { legacy_createStore as createStore } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 // import counterReducer from './reducers/counterReducer'; // <--- essa função que contem o novo state e action
-import rootReducer from '../redux/reducers/index'; // <--- essa função que contem o novo state e action
+import rootReducer from './reducers/index'; // <--- essa função que contem o novo state e action
 
 // Definir o estado inicial: 
 // const INITIAL_STATE = { count: 0 };

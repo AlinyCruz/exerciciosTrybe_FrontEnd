@@ -17,7 +17,7 @@ class App extends React.Component {
     );
   }
 }
-
+// Essa função puxa apenas o que precisar do state
 const mapStateToProps = (state) => ({
   countState: state.counterReducer.count,
 });
