@@ -1,1 +1,1 @@
-<img align="center" src="/home/alinycruz/Área de Trabalho/Trybe/Git/Turma-27A/Exercicios-Trybe_27A/02-Front-End/Seção-09-Context-API-e-React-Hooks/Dia-01-React-Hooks-useState-e-useEffect/formulario-trybe/Captura de tela de 2023-02-15 23-28-17.png"/>
+<img align="center" src="Captura de tela de 2023-02-15 23-28-17.png"/>
