@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './Formulario.css';
 
 function Formulário() {
   const [nome , setNome] = useState('');
@@ -8,11 +8,11 @@ function Formulário() {
   const [module, setModule] = useState();
 
   return (
-    <form>
+    <form className="form">
       <fieldset>
-        <legend>Formulário da Trybe</legend>
+        <legend className="legend">Formulário da Trybe</legend>
       <br />
-      <label htmlFor="nome">
+      <label htmlFor="nome" className="legend">
         Nome Completo :
       <input
       type="text"
@@ -22,7 +22,7 @@ function Formulário() {
       />
       </label>
 
-      <label htmlFor="idade">
+      <label htmlFor="idade" className="legend">
         Idade :
       <input
       type="number"
@@ -32,7 +32,7 @@ function Formulário() {
       />
       </label>
 
-      <label htmlFor="cidade">
+      <label htmlFor="cidade" className="legend">
         Cidade :
       <input
       type="text"
@@ -45,9 +45,9 @@ function Formulário() {
       </fieldset>
       <br />
       <fieldset>
-        <legend>Módulo</legend>
+        <legend className="legend">Módulo</legend>
       
-        <label htmlFor="fundamentos">
+        <label htmlFor="fundamentos" className="legend">
           <input
           type="radio"
           id="fundamentos"
@@ -59,7 +59,7 @@ function Formulário() {
           Fundamentos
         </label>
         <br />
-        <label htmlFor="frontend">
+        <label htmlFor="frontend" className="legend">
           <input
           type="radio"
           id="frontend"
@@ -71,7 +71,7 @@ function Formulário() {
           Front-end
         </label>
         <br />
-        <label htmlFor="backend">
+        <label htmlFor="backend" className="legend">
           <input
           type="radio"
           id="backend"
@@ -83,7 +83,7 @@ function Formulário() {
           Back-end
         </label>
         <br />
-        <label htmlFor="cs">
+        <label htmlFor="cs" className="legend">
           <input
           type="radio"
           id="cs"
