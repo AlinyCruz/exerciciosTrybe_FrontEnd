@@ -1,1 +1,0 @@
-<img align="center" src="formulario-trybe/Captura de tela de 2023-02-15 23-28-17.png"/>
