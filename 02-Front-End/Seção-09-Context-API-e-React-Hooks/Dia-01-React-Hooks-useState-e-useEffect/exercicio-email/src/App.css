@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gloock&family=Quicksand:wght@300&display=swap');
+
+body {
+  background-image: url('https://i.pinimg.com/originals/38/38/c0/3838c056427afe64ceec011ba6106118.jpg');
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(242, 150, 173);
+  align-items: center;
+  padding: 10px;
+  width: 144vh;
+  height: 20vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  margin-top: 50px;
+  font-size: 50px;
+  color: aliceblue;
+  font-family: 'Gloock', serif;
+}
+.botao-nao-lido1 {
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 1px 5px;
+  font-family: 'Gloock', serif;
+}
+
+.botao-lido1 {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 1px 5px;
+  font-family: 'Gloock', serif;
+}
+
+.botoes-01 {
+  margin-top: 80px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  border: 3px white solid;
+  border-radius: 20px;
+  background-color: white;
+  opacity: 0.7;
+  width: 130vh;
+  height: 20vh;
+  
+}
+
+.lista-email {
+  display: flex;
+  font-family: 'Gloock', serif;
+  color: black;
+}
+
+.botoes-02 {
+  margin: 1px 10px;
+}
+
+.botao-nao-lido2 {
+  border-radius: 5px;
+  margin: 1px 5px;
+}
+
+.botao-lido2 {
+  border-radius: 5px;
+  margin: 1px 5px;
+}
