@@ -50,6 +50,7 @@ header {
 main {
   display: flex;
   justify-content: center;
+  padding: 25px 10px;
   margin-top: 100px;
   border: 3px white solid;
   border-radius: 20px;
@@ -57,25 +58,34 @@ main {
   opacity: 0.7;
   width: 130vh;
   height: 20vh;
+  font-family: 'Gloock', serif;
   
 }
 
-.lista-email {
-  display: flex;
-  font-family: 'Gloock', serif;
-  color: black;
-}
-
 .botoes-02 {
+  display: flex;
+  align-items: center;
   margin: 1px 10px;
 }
 
 .botao-nao-lido2 {
   border-radius: 5px;
   margin: 1px 5px;
+  height: 30px;
+  width: 50px;
 }
 
 .botao-lido2 {
   border-radius: 5px;
   margin: 1px 5px;
+  height: 30px;
+  width: 50px;
+}
+
+/* .mensagem-lida {
+  color: rgb(0, 255, 234);
+} */
+
+.mensagem-não-lida {
+  font-weight: bold;
 }
