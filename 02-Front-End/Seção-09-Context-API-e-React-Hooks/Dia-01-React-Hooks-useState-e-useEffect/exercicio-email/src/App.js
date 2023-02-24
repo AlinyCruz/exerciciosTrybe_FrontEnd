@@ -2,8 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import List from './components/List';
 import listaEmails from './data/listaDeMensagens';
-import { useState } from 'react';
-// import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { LIDA, NAO_LIDA } from './constants';
 
 function App() {
   
@@ -19,13 +19,32 @@ function App() {
     setEmail(atualizaMensagens);
   };
 
+  const marcaLidas = () => {
+    const todasLidas = email.map((e) => ({...e, status: LIDA}));
+    setEmail(todasLidas);
+  }
+
+  const marcaNaoLidas = () => {
+    const todasLidas = email.map((e) => ({...e, status: NAO_LIDA}));
+    setEmail(todasLidas);
+  }
+
+  useEffect(() => {
+    const todosEmails = email.every(({status}) => status === LIDA);
+    if (todosEmails) {
+      alert('PARABÉNS! VOCÊ LEU TODOS OS EMAILS')
+    }
+  },[email]);
+
   return (
     <div>
-     <Header />
+     <Header 
+      marcaLidas={ marcaLidas }
+      marcaNaoLidas={ marcaNaoLidas }
+      />
      <List email={ email }
      setStatusEmail={ setStatusEmail }
      />
-
     </div>
   );
 }
